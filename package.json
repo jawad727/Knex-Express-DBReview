@@ -1,0 +1,12 @@
+{
+  "name": "knex-dbReview",
+  "version": "1.0.0",
+  "description": "Hubs guided project for Web API I module",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
