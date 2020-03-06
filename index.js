@@ -1,12 +1,7 @@
-const express = require("express");
+const server = require('./server.js');
 
-const server = express();
+const port = 5000;
 
-server.get("/", (req, res) => {
-    res.send("API up and running")
-})
-
-server.listen(4000, () => {
-    console.log("API UP AND RUNNING")
-})
-
+server.listen(port, () => {
+  console.log(`\n *** Server listening on port ${port} ***\n`);
+});
