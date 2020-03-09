@@ -1,16 +1,31 @@
 {
-  "name": "knex-dbReview",
+  "name": "Knex-Express-DBReview",
   "version": "1.0.0",
-  "description": "Hubs guided project for Web API I module",
+  "description": "Reviewing how to build a postgres database with knex and express",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jawad727/Knex-Express-DBReview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jawad727/Knex-Express-DBReview/issues"
+  },
+  "homepage": "https://github.com/jawad727/Knex-Express-DBReview#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "knex": "^0.20.11",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "knex": "^0.20.10"
   }
 }
