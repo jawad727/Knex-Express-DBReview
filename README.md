@@ -5,3 +5,4 @@ Reviewing how to build a postgres database with knex and express
 2. Install knex globally as well as all other needed dependencies
 3. Create a knexfile by running -> knex init
 4. create first table by running -> knex migrate:make whatev_table
+5. knex migrate:latest <- allows us to migrate to the latest table
