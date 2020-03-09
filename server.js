@@ -1,5 +1,8 @@
 const express = require('express')
 
+
+const userRouter = require("./queries/queriesRouter")
+
 const server = express();
 
 server.use(express.json())
@@ -12,7 +15,8 @@ server.get('/', (req, res) => {
 })
 
 //Routes
-//  server.use('/', recipeRouter)
+
+ server.use('/asd', userRouter)
 
 
 module.exports = server;

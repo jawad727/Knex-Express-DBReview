@@ -1,24 +1,40 @@
-const router = require('express').Router();
+const router = require('express').Router()
+const db = require('./queriesHelper')
 
-router.get('/project/:id', (req, res) => {
-    const id = req.params.id
 
-    ptDB
-    .getById(id)
+router.get(`/user`, (req, res) => {
+    // const ID = req.params.id
 
-    .then(project => {
+    db
+    .getUser()
+    .then(user => {
 
-    ptDB
-    .getActionById(id)
-    .then( actionsArray => {
-        
-        res.status(200).json({...project, actions: actionsArray})
 
+        res.status(200).json({
+            ...user
         })
+
+
     })
-    .catch(error => {
-        res.status(500).json({
-            error: 'There was an error'
-        })
+    .catch(err => {
+        res.status(500).json({message: "there was an error"})
     })
+
 })
+
+router.post('/register', (req, res) => {
+    let user = req.body;
+
+    db
+    .add(user)
+    .then(info => {
+
+        res.status(201).json({...info})
+    })
+    .catch(err => {
+        res.status(500).json(err)
+    })
+
+})
+
+module.exports = router;
