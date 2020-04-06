@@ -1,11 +1,16 @@
-// Update with your config settings.
+
+require('dotenv').config()
+
+const password = process.env.PASSWORD;
 
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
-      filename: './data/users.db3'
+      database: 'tester',
+      user:     'postgres',
+      password: password
     },
     useNullAsDefault: true,
     migrations: {

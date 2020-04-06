@@ -20,6 +20,7 @@ function add(user) {
     return db('users')
     .insert(user)
     .then(ids => {
-        return getById(ids[0])
+        // return getById(ids[0])
+        return ids
     })
 }
